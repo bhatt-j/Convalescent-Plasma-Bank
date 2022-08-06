@@ -1,0 +1,119 @@
+1) Retrieve all the Plasma having Blood Group = 'B+' and Blood Group = 'B-' and Plasma bank id = 103
+
+=> 	select bld_grp,plasma_qty,Pbank_name from Plasma 
+	natural join plasma_bank where Pbank_id = 103 
+   	intersect 
+   	select bld_grp,plasma_qty,Pbank_name from Plasma natural 
+	join plasma_bank where bld_grp = 'B+' or bld_grp = 'B-'
+
+2) Retrieve all the Plasma whose plasma_qty is > 250ml and Blood Group = 'B+' and Plasma bank id = 101
+   
+=> 	select plasma_id,bld_grp,sum(plasma_qty),Pbank_name from Plasma natural 
+	join plasma_bank where Pbank_id = 101 and bld_grp = 'B+'
+   	and plasma_qty > 250 group by (plasma_id,bld_grp,Pbank_name)
+
+3) Retrieve all the Plasma Donor having Blood Group = 'AB+' and City = 'Aravali' 
+
+=> 	select pdonor_id,pdonor_name,pdonor_bld_grp,city_name from plasma_donor 
+	natural join city 
+	where pdonor_bld_grp = 'AB+' and city_name = 'Aravalli' 
+
+4) Retrieve the Plasma_qty where City = 'Bhavanagar' and blood group = 'AB-'
+
+=> 	select plasma_id,bld_grp,plasma_qty,city_name from plasma 
+	natural join plasma_bank 
+	natural join city  
+	where bld_grp = 'AB-' and city_name = 'Amreli'
+
+5) Retrieve plasma_donor whoose blood_report status = ‘TRUE’
+
+=> 	select b.sampleno, b.bld_grp,b.status,b.pdonor_id from blood_report as b 
+	join plasma_donor as p on b.pdonor_id = p.pdonor_id
+   	where status=TRUE order by pdonor_id
+
+6) Retrieve the Plasma and Plasma_qty where Collection_date = '2021-01-20'
+
+=> 	select bld_grp,plasma_qty,storage_date from plasma 
+	where storage_date = '2021-01-20' 
+
+7) Retrieve the Total Plasma_qty of all plasma bank.
+
+=> 	(select sum(p.plasma_qty)as plasma_qty ,p.Pbank_id from plasma as p join plasma_bank as pb on p.Pbank_id = pb.Pbank_id
+    	group by(p.Pbank_id)) order by Pbank_id ;
+
+8) Delete Plasma_Donor whose Blood_Sample_Status = ‘FALSE’.
+
+=> 	delete from plasma_donor where pdonor_id in (select pdonor_id from blood_report where status = 'FALSE') 
+
+9) Retrive total plasma stock of plasma bank where plasma bank id = 105 .
+
+=> 	select (sum(plasma_qty) - sum(supplied_plasma_qty))Total_Stock from plasma as p 
+	natural join supplied_plasma as sp 
+   	where p.Pbank_id = 105 and sp.Pbank_id  = 105
+
+10) Retrieve the Plasma_Donors, Recipients where Register_date between '2021-05-01' and '2021-12-01'
+
+=> 	select p.pdonor_name as plasma_donor_name,  p.pdonor_bld_grp as plasma_donor_blood_group , r.recip_name as recipient_name , r.recip_bld_grp as recipient_blood_group, r.recip_reg_date 
+   	from plasma_donor as p natural join recipients r where 
+   	p.pdonor_reg_date between '2021-05-01' and '2021-12-01' and r.recip_reg_date between '2021-05-01' and '2021-12-01'
+
+11) Retrieve Plasma Bank,Blood_group, Plasma_qty where Blood_group = ‘B+’ And Blood_group = ‘O+’ And Plasma bank id = 115
+
+=> 	select Pbank_name,bld_grp,plasma_qty from plasma 
+	natural join plasma_bank where bld_grp = 'O+'and Pbank_id = 115
+   	union
+   	select Pbank_name,bld_grp,plasma_qty from plasma 
+	natural join plasma_bank where bld_grp = 'AB-'and Pbank_id = 115
+
+12) Retrive total plasma quanty and hospital needed blood where city  = 'Surat'
+
+=> 	select Pbank_name,bld_grp,plasma_qty,city_name,hosp_name,hosp_needed_bld_grp,hosp_needed_plasma_qty from plasma natural 
+	join plasma_bank 
+   	natural join city natural join hospital  natural join hospital_needed_bld_grp_qty  
+	where city_name = 'Surat'
+
+13) Retrive total plasma given by plasma donor and total plasma supplied to recipients where storage date between '2021-01-01' and '2021-12-02'
+
+=> 	select sum(plasma_qty) as Total_Plasma_Donor , sum(recip_needed_plasma_qty)as Total_Recipients from plasma 
+	natural join recipients
+   	where storage_date between '2021-01-01' and '2021-12-02' and recip_reg_date between '2021-01-01' and '2021-12-02'
+
+14) Retrive Today total plasma needed from recipients where blood group = 'O-'
+
+=> 	select recip_needed_plasma_qty , recip_reg_date from recipients 
+	where recip_bld_grp = 'O-'
+
+15) Retrive total plasma donate by plasma_donor where plasma bank id = 105
+
+=> 	select sum(plasma_qty),Pbank_name from plasma 
+	natural join plasma_bank where Pbank_id = 105
+   	group by(Pbank_name) 
+
+16) Retrive total plasma supplied to recipients where plasma bank id = 105
+
+=> 	select sum(supplied_plasma_qty),Pbank_name from supplied_plasma 
+	natural join plasma_bank where Pbank_id = 105
+	group by(Pbank_name) 
+
+17) Retrieve recipients whoose blood_report status = ‘FALSE’
+
+=> 	select b.sampleno ,b.bld_grp,b.status,b.recip_id from blood_report as b 
+	join recipients as r on b.recip_id = r.recip_id
+   	where status=false order by recip_id
+
+18) Retrive plasma_donor whoose donate max plasma from all plasma bank
+
+=> 	select max(p.plasma_qty),p.bld_grp,pd.pdonor_name,pb.Pbank_name from plasma as p 
+	join plasma_donor as pd on p.pdonor_id = pd.pdonor_id
+   	join plasma_bank as pb on p.Pbank_id = pb.Pbank_id
+   	group by(p.plasma_qty,p.bld_grp,pd.pdonor_name,pb.Pbank_name) order by p.plasma_qty desc;
+
+19) Retrive the donating history of 'Ramesh'.
+=> 	select pd.pdonor_name, p.bld_grp, p.plasma_qty, p.storage_date from plasma_donor as pd 
+   	join plasma as p on pd.pdonor_id = p.pdonor_id
+   	where pd.pdonor_name = 'Ramesh' and pd.pdonor_phone_1 = 9856745856;
+
+20) Retrive the history of recipient 'Tanvi Bhatt'. 
+=> 	select r.recip_name, sp.supplied_bld_grp, sp.supplied_plasma_qty, sp.supplied_date from recipients as r
+   	join supplied_plasma as sp on r.recip_id = sp.recip_id
+   	where r.recip_name = 'Tanvi Bhatt' and r.recip_phone_1 = 7876764578;

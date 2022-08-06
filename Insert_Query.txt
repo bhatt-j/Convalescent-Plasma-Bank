@@ -1,0 +1,493 @@
+1)City
+
+insert into city values (101, 'Rajkot');
+
+insert into city values (102, 'Surat');
+
+insert into city values (103, 'Anand');
+
+insert into city values (104, 'Aravalli');
+
+insert into city values (105, 'Hyderabad');
+
+insert into city values (106, 'Haldwani');
+
+insert into City values (107,'Bhavanagar');
+
+insert into City VALUES(108,'Mehsana');
+
+insert into City values (109,'Patan');
+
+insert into City values (110, 'Jamnagar');
+
+insert into City values (111, 'Bhuj');
+
+insert into City values (112, 'Junagadh');
+
+insert into city values (113, 'Amreli');
+
+insert into city values (114, 'Gandhinagar');
+
+insert into city values (115, 'Vadodara');
+
+
+2)Plasma_Bank_Manager
+
+insert into Plasma_Bank_Mgr values(101,'Ritesh Desai','mgr-rd2010@gmail.com',875951246,'mgrRD@134');
+
+insert into Plasma_Bank_Mgr values(102,'Roma Vaghela','mgr-rv2004@gmail.com',6389651782,'mgrRV@732');
+
+insert into Plasma_Bank_Mgr values(103,'Hardik Talpada','mgr-ht2010@gmail.com',9565281739,'mgrHT@636');
+
+insert into Plasma_Bank_Mgr values(104,'Vijay Reddy','mgr_vijayr@gmail.com', 9518752462,'vr@123104');
+
+insert into Plasma_Bank_Mgr values(105,'Nikhil Rao','mgr_nikhil@gmail.com', 8963651782,'nr234@105');
+
+insert into Plasma_Bank_Mgr values(106,'Sumajali Priya','mgr_suma@gmail.com', 8165295739,'sp345@106');
+
+insert into Plasma_Bank_Mgr values(107,'Rakesh','rakesh345@gmail.com',9863574125,'Rakesh$321');
+
+insert into Plasma_Bank_Mgr values(108,'Malhar','Malhar290@gmail.com',7854269135,'Malhar@123');
+
+insert into Plasma_Bank_Mgr values(109,'Ankur','Ankur111@gmail.com',9878527864,'Ankurshah#000');
+
+insert into Plasma_Bank_Mgr values (110, 'Rishi Gupta', 'bnk110@gmail.com',7148951233, 'rgta0@6');
+
+insert into Plasma_Bank_Mgr values (111, 'Rashi Singh', 'bnk111@gmail.com', 8712450721,'rs12#yt');
+
+insert into Plasma_Bank_Mgr values (112, 'Alok Mishra', 'bnk112@gmail.com', 6001245877, 'alk@#12');
+
+insert into Plasma_Bank_Mgr values(113,'Harsh Patel','mgr-hp2001@gmail.com',8814512462,'mgrhp@2001');
+
+insert into Plasma_Bank_Mgr values(114,'Neel Vaghela','mgr-nv2000@gmail.com',6365651782,'mgrnv@2000');
+
+insert into Plasma_Bank_Mgr values(115,'Rajan Prajapati','mgr-rp1989@gmail.com',8875281739,'mgrrp@1989');
+
+				
+3)Plasma_Bank
+
+insert into Plasma_Bank values (101,'Surat Plasma Bank',7554233914,9227781519,102,103);
+
+insert into Plasma_Bank values (102,'Bhaikaka Plasma Bank',8228827657,7123657728,103,101);
+
+insert into Plasma_Bank values (103,'Indian Greencross Plasma Bank',9879867453,8723433278,101,102);
+
+insert into plasma_bank values (104,'Aravalli Plasma Bank', 7554233277, 9149281519, 104, 104);
+
+insert into plasma_bank values (105,'Hyderabad Plasma Bank', 8572825776, 7123628728, 105, 105);
+
+insert into plasma_bank values (106,'Haldwani Plasma Bank', 8698797453, 3438723278, 106, 106);
+
+insert into Plasma_Bank values(107,'Red Cross',8957461235,9854763215,107,107);
+
+insert into Plasma_Bank values(108,'Jivan Plasma Bank',9638527401,9845765415,108,108);
+
+insert into Plasma_Bank values(109,'Goodwill Plasma Bank',8957568423,8659743215,109,109);
+
+insert into Plasma_Bank values (110, 'Healthy Plasma Bank', 6247895415,9875200224, 110,110);
+
+insert into Plasma_Bank values (111, 'City Plasma Bank', 5789466123, 6043718920,111,111);
+
+insert into Plasma_Bank values (112, 'Sneh Plasma Bank', 7542168000, 6874591278,112,112);
+
+insert into plasma_bank values (113,'Anand Plasma Bank',7123433914,9269851519,114,115);
+
+insert into plasma_bank values (114,'Civil Plasma Bank',8228812357,7121456928,115,113);
+
+insert into plasma_bank values (115,'Lions club Plasma Bank',9111867453,6355333278,113,114);
+
+
+4)Hospital
+
+insert into Hospital values (101,'SVT Hospital',8754365732,7389651535,'Nr. Sardar Bug',102,103);
+
+insert into Hospital values (102,'Sivam Hospital',9586231478,8254475896,'Opp. Vikas Complex',101,102);
+
+insert into Hospital values (103,'Harshal Hospital',7565542185,8756474152,'Opp. Triveni Arcade',103,101);
+
+insert into Hospital values (104,'ARP Hospital',9797975757,9797976767,'Behind Pandavas Temple', 103, 103);
+
+insert into Hospital values (105,'SBR Hospital',4446441448,4440445446,'Beside Smtp School', 102, 107);
+
+insert into Hospital values (106,'HE Hospital',7575752185,7575752288,'Opposite Nirnay Bridge', 103, 102);
+
+insert into Hospital values(107,'Apollo',8596324568,8956354982,'Jivaraj-park Bhavanagar',107,103);
+
+insert into Hospital values(108,'Jivaraj-Mehta',9876858974,8975213459,'Vasna Mehsana',111,108);
+
+insert into Hospital values(109,'Aagman',7854623815,8657451239,'Kotyad Patan',109,114);
+
+insert into Hospital values (110, 'Savitri Devi Hospital', 9123475334, 7746581459, '620 N Block' ,105,107);
+
+insert into Hospital values (111, 'City Hospital' , 6457899215, 9647512355,'64 G BLOCK', 102, 102);
+
+insert into Hospital values (112, 'Mariampur Hospital', 8801478957, 7984561224, '85 A BLOCK', 110,109);
+
+insert into Hospital values (113,'Sardar Patel Hospital',9875665732,7389651535,'Opp. New Bus Stand',114,115);
+
+insert into Hospital values (114,'Civil Hospital',9874231478,8596575896,'Near SBI ',113,114);
+
+insert into Hospital values (115,'General Hospital',6354542185,8965274152,'Near Kamati Garden',115,113);
+
+
+5)Hospital_needed_Blood
+
+insert into Hospital_Needed_Bld_Grp_Qty values (1,101,'AB+',3000,'2021-07-23');
+
+insert into Hospital_Needed_Bld_Grp_Qty values (2,102,'O+',5000,'2020-10-20');
+
+insert into Hospital_Needed_Bld_Grp_Qty values (3,103,'B-',7000,'2021-05-03');
+
+insert into Hospital_Needed_Bld_Grp_Qty values (4,104,'O+',100,'2021-10-27');
+
+insert into Hospital_Needed_Bld_Grp_Qty values (5,105,'O+',4000,'2021-11-03');
+
+insert into Hospital_Needed_Bld_Grp_Qty values (6,106,'O+',300,'2021-11-20');
+
+insert into Hospital_Needed_Bld_Grp_Qty values(7,107,'AB-',1000,'2021-01-20');
+
+insert into Hospital_Needed_Bld_Grp_Qty values(8,108,'B+',5000,'2021-11-26');
+
+insert into Hospital_Needed_Bld_Grp_Qty values(9,109,'O+',1500,'2021-12-01');
+
+insert into Hospital_Needed_Bld_Grp_Qty values (10,110, 'A+', 6900, '2021-10-12');
+
+insert into Hospital_Needed_Bld_Grp_Qty values (11,111, 'O+', 8800, '2021-11-21');
+
+insert into Hospital_Needed_Bld_Grp_Qty values (12,112, 'B-', 8500, '2021-11-26');
+
+insert into Hospital_Needed_Bld_Grp_Qty values (13,113,'AB+',3000,'2021-09-21');
+
+insert into Hospital_Needed_Bld_Grp_Qty values (14,114,'O+',5000,'2020-10-30');
+
+insert into Hospital_Needed_Bld_Grp_Qty values (15,115,'B-',7000,'2021-05-28');
+
+
+6)Recording_Staff
+
+insert into Recording_Staff values (101,'Disha Savani',8747856935,8358654758,101);
+
+insert into Recording_Staff values (102,'Manisha Parmar',7698548574,8145874525,102);
+
+insert into Recording_Staff values (103,'Vikas Soni',6965472185,9865529865,103);
+
+insert into recording_staff values (104, 'Ajay Roy', 8723456354, 8588654448);
+
+insert into recording_staff values (105, 'Keerthi Suman', 8978656789, 8156374525);
+
+insert into recording_staff values (106, 'Aaditi Chetan', 9876572185, 9833229865);
+
+insert into Recording_Staff values(107,'Rahil',8965374523,98657412358,107);
+
+insert into Recording_Staff values(108,'Dev',9865741235,8679546582,108);
+
+insert into Recording_Staff values(109,'Darshan',8975412562,7854968562,109);
+
+insert into Recording_Staff values (110, 'Shivi Singh',6214789544, 7275070644,110);
+
+insert into Recording_Staff values (111, 'Pranjul Pandey',9824511363,9967512457,111);
+
+insert into Recording_Staff values (112, 'Nisha Mathur',7584684875,8754621374,112);
+
+insert into Recording_Staff values (113,'Krisha Dabhi',6353856935,9898654758,113);
+
+insert into Recording_Staff values (114,'Manish Prajapati',8988548574,9863874525,114);
+
+insert into Recording_Staff values (115,'Vyom Patel',6353472185,9889859865,115);
+
+				
+7)LabTester
+
+insert into LabTester values(101,'Niyati Patel','np2001@gmail.com','labnp#123G' ,101);
+
+insert into LabTester values(102,'Sana Malik','sm1998@gmail.com','labsm#908F',102);
+
+insert into LabTester values(103,'Hiten Solanki','hs1989@gmail.com','labhs#345K',103);
+
+insert into labtester values(104,'Arun Kalyan','tstr_arun@gmail.com','tstrak@1989');
+
+insert into labtester values(105,'Arjun Reddy','tstr_arjun@gmail.com','tstrar@1991');
+
+insert into labtester values(106,'Ananat Rao','tstr_anant@gmail.com','tstrar@1999');
+
+insert into LabTester values(107,'Kartik','kartik545@gmail.com','Kartik@234',107);
+
+insert into LabTester values(108,'Janvi','janvi@gmail.com','janvibhatt$202',108);
+
+insert into LabTester values(109,'Parth','parth198@gmal.com','Parthsoni#112',109);
+
+insert into LabTester values (110, 'Siddhart Pandey', 'lab110@gmail.com', 'sid16#09' , 110);
+
+insert into LabTester values (111, 'Ayush Bajpai', 'lab111@gmail.com', 'a45#bj' , 111);
+
+insert into LabTester values (112, 'Shivangi Dixit', 'lab112@gmail.com', 'shiv#12' , 113);
+
+insert into LabTester values(113,'Nityam Soni','ns1999@gmail.com','labns@1999',113);
+
+insert into LabTester values(114,'Faisal Vohra','fs1997@gmail.com','labfv@1997',114);
+
+insert into LabTester values(115,'Dharmil Dholakiya','dd2002@gmail.com','labdd@2002',115);
+
+		
+8)Plasma_Donor
+
+insert into Plasma_Donor values (101,'Arvind Rathod','Male',9656178256,9589565239,'B+ve','2020-06-20','1994-04-24','27',103,102);
+
+insert into Plasma_Donor values (102,'Paresh Raval','Male',9498524187,6358651487,'A-ve','2020-07-08','1991-02-12','30',101,103);
+
+insert into Plasma_Donor values (103,'Payal Parmar','Female',9598172856,9798253698,'O-ve','2020-09-03','1988-01-05','33',102,101);
+
+insert into plasma_donor values (104,'Dhirali Bisht','Female', 8989178256, 9989565239,'A-','2021-11-11','1999-4-22',22,104,104);
+
+insert into plasma_donor values (105,'Raj Nainwal','Male', 9497856487, 9958651487,'AB+','2021-11-08','1999-02-12',22,104,104);
+
+insert into plasma_donor values (106,'Nayantara Krishna','Female', 9234372856, 9998253698,'B-','2021-11-12','2000-01-05',21,105,105);	
+
+insert into Plasma_Donor values(107,'Ramesh','Male',9856745856,7845968525,'AB-','2021-11-24','1989-07-01',32,107,107);
+
+insert into Plasma_Donor values(108,'Kashish','Female',7895648568,7845968578,'B+','2020-10-25','2000-04-06',21,108,108);
+
+insert into Plasma_Donor values(109,'Anil','Male',8654712568,9854125874,'O+','2021-05-16','1999-08-23',22,109,109);
+
+insert into Plasma_Donor values (110, 'Sarita Modi', 'Female', 7123987547, 8065217840, 'O+', '2021-07-23', '1992-04-12', 29,110,110);
+
+insert into Plasma_Donor values (111, 'Vinay Sahu', 'Male', 6314780222, 7123489535, 'B-', '2021-08-08', '1990-10-12', 31,105,107);
+
+insert into Plasma_Donor values (112, 'Rahul Kumar', 'Male',6547892154, 8547964123,'B+', '2021-10-16', '1996-06-23', 25, 111,109);
+
+insert into Plasma_Donor values (113,'Sahdev Rathod','Male',8985178256,9655565239,'B+','2020-07-22','1994-12-02',27,115,114);
+
+insert into Plasma_Donor values (114,'Sanjay Raval','Male',8898524187,6353651487,'A-','2020-08-09','1991-03-11',30,113,115);
+
+insert into Plasma_Donor values (115,'Parth Shah','Male',7896852358,8958746385,'O+','2020-09-15','1991-03-16',30,114,113);
+
+insert into Plasma_Donor values (116,'Priya Patel','Female',9857452358,8958752104,'O+','2020-08-11','1991-04-17',30,104,105);					 
+
+insert into Plasma_Donor values (117,'Minal Shah','Female',9856745821,7458965281,'AB-','2020-09-15','1992-03-11',29,114,113);
+
+insert into Plasma_Donor values (118,'Jinal Baxi','Female',8956745123,8974585632,'B+','2021-02-01','1991-05-17',31,107,110);
+
+insert into Plasma_Donor values (119,'Minaxi sharma','Female',8596745210,9856745821,'AB-','2021-09-14','1992-05-10',28,112,111);
+
+insert into Plasma_Donor values (120,'Vidhi Shah','Female',7856320145,8569745216,'AB-','2021-02-05','1990-08-12',32,101,101);
+
+insert into plasma_donor values (121,'Esha Gupta','Female', 8989118256, 9989565139,'A-','2021-09-09','1999-06-21',22,108,109);
+
+insert into plasma_donor values (122,'Dhairya Singh','Female',8189178256, 9989565299,'A+','2021-09-11','1989-04-22',32,104,104);
+
+insert into plasma_donor values (123,'Jay Rathore','Male', 8989278256, 9089565239,'AB-','2021-09-15','1990-05-04',31,109,107);
+
+insert into plasma_donor values (124,'Vishal Gupta','Male', 6099178256, 9149565239,'O-','2021-10-11','1976-09-12',45,106,107);
+
+insert into plasma_donor values (125,'Shashank Patel','Male', 8989123256, 6689565239,'B-','2021-10-19','1980-06-02',41,110,108);
+
+insert into plasma_donor values (126,'Abhinav Pandey','Male', 8977178256, 9981265239,'O+','2021-10-20','1969-10-26',52,106,104);
+
+insert into plasma_donor values (127,'Rushali Bishnoi','Female', 7989178256, 6989565239,'AB+','2021-10-25','1998-08-25',23,106,105);
+
+insert into plasma_donor values (128,'Dhruv Awasthi','Male', 8982778256, 9982365239,'A+','2021-08-11','1983-01-13',38,110,112);
+
+insert into plasma_donor values (129,'Roshni Shukla','Female', 8719178256, 9569565239,'O+','2021-09-09','1985-08-12',36,115,114);
+
+insert into plasma_donor values (130,'Shubhankar Pandey','Male', 6428178256, 9129565239,'B+','2021-11-29','1987-12-24',38,104,104);
+
+9)Plasma
+
+insert into Plasma values (101,600,'B+','2020-06-20',101,101);
+
+insert into Plasma values (102,500,'O-','2020-09-03',103,103);
+
+insert into Plasma values (103,700,'O-','2020-12-03',103,103);
+
+insert into plasma values (104, 300,'AB+','2021-11-08', 105);
+
+insert into plasma values (105, 400,'AB+','2021-12-06', 105);
+
+insert into plasma values (106, 500,'B-','2021-11-12', 106);
+
+insert into Plasma values(107,1000,'AB-','2021-11-24',107,107);
+
+insert into Plasma values(108,1200,'B+','2021-10-25',108,108);
+
+insert into Plasma values(109,1500,'O+','2021-05-16',109,109);
+
+insert into Plasma values (110, 690, 'O+' ,'2021-07-23',110,110);
+
+insert into Plasma values (111, 550, 'B-', '2021-08-08', 111,111);
+
+insert into Plasma values (112,600, 'B+', '2021-10-16', 112,112);
+
+insert into Plasma values (113,600,'B+','2020-07-22',113,113);
+
+insert into Plasma values (114,500,'O+','2020-09-15',115,115);
+
+insert into Plasma values (115,700,'O+','2020-11-17',115,115);
+
+insert into Plasma values(116,1500,'AB-','2021-01-20',104,105);
+
+insert into Plasma values(117,500,'B+','2021-01-20',103,107);
+
+insert into Plasma values(118,1500,'O+','2021-02-20',105,105);
+
+insert into Plasma values(119,1000,'B+','2021-03-23',104,105);
+
+insert into Plasma values(120,500,'AB-','2021-05-11',103,105);
+
+insert into Plasma values (121,690,'A-','2021-09-09',121,101);
+
+insert into Plasma values (122,800,'A+','2021-09-11',122,101);
+
+insert into Plasma values (123,700,'AB-','2021-09-15',123,104);
+
+insert into Plasma values (124,880,'O-','2021-10-11',124,105);
+
+insert into Plasma values (125,600,'B-','2021-10-19',125,107);
+
+insert into Plasma values (126,900,'O+','2020-10-20',126,113);
+
+insert into Plasma values (127,770,'AB+','2020-10-25',127,112);
+
+insert into Plasma values (128,580,'A+','2020-08-11',128,104);
+
+insert into Plasma values (129,1000,'O+','2020-09-09',129,106);
+
+insert into Plasma values (130,600,'B+','2020-11-30',130,110);
+
+10)Recipients
+
+insert into Recipients values (101,'Ravi Yadav','Male',8978656789,8975462584,'B+','1986-02-09','2020-4-23',35,500,102,103);
+
+insert into Recipients values (102,'Subhas Trivedi','Male',7894764578,7859846258,'O+','1995-01-12','2020-06-06',26,700,101,102);
+
+insert into Recipients values (103,'Ankita Desai','Female',7894764578,7485958681,'AB+','1979-04-18','2020-09-10',42,650,103,101);
+
+insert into recipients values (104,'Tanvi Bhatt', 'Female', 7876764578, 8945673428, 'AB+', '1979-02-09', '2021-11-13', '42', '500',  104, 104);
+
+insert into recipients values (105,'Prabhas Iyyer', 'Male', 9876354521, 9898454578, 'O-', '1989-01-12', '2021-10-21', '32', '700', 105, 105);
+
+insert into recipients values (106,'Nikil Kalyan', 'Male', 9876354521, 7878362718, 'O+', '1969-04-18', '2021-10-22', '52', '1000', 105, 105);
+
+insert into Recipients values(107,'Ishan','Male',7856426589,8975462584,'B+','1988-01-09','2021-09-03',33,1000,107,107);
+
+insert into Recipients values(108,'Mira','Female',8597456235,9587451235,'AB+','1995-09-22','2021-10-19',26,1500,108,108);
+
+insert into Recipients values(109,'Sonali','Female',7859846258,9856234752,'O+','1992-01-11','2021-11-02',29,1200,109,109);
+
+insert into Recipients values (110, 'Sasha Mishra', 'Female', 8452107853, 7201450014, 'A-', '2000-04-02', '2021-08-08', 21, 825,101,110);
+
+insert into Recipients values (111, 'Prachi Kapoor', 'Female', 6123478954, 8001475236, 'AB+', '1999-01-03', '2021-10-04', 23,560, 105,109);
+
+insert into Recipients values (112, 'Eklavya Shukla', 'Male', 6004789547, 7985461227, 'A+', '1995-09-05', '2021-11-01', 26, 880, 111,101);
+
+insert into Recipients values (113,'Uttam Shah','Male',9898747556,8569745236,'B+','1988-07-04','2020-06-28','32','500',115,113);
+
+insert into Recipients values (114,'Himanshu Patel','Male',7894132578,8569784526,'0+','1997-07-01','2020-06-26','24','700',114,115);
+
+insert into Recipients values (115,'Jay Soni','Male',8401045718,9874512586,'AB+','1977-08-20','2020-12-11','44','650',113,114);
+
+
+11)Blood_Report
+
+insert into Blood_Report values (101,'O-',TRUE,103,NULL,102);
+
+insert into Blood_Report values (102,'AB+',FALSE,NULL,103,102);
+
+insert into Blood_Report values (103,'B+',TRUE,101,NULL,103);
+
+insert into blood_report values (104,'A-', FALSE,  104, NULL, 104);
+
+insert into blood_report values (105,'AB+', TRUE,  105, NULL, 104);
+
+insert into blood_report values (106,'B-', TRUE,  106, NULL, 105);
+
+insert into blood_report values (107,'AB+', TRUE,  107, NULL, 107);
+
+insert into blood_report values (108,'AB+', FALSE,  NULL,108, 108);
+
+insert into blood_report values (109,'O+', TRUE,  109, NULL, 109);
+
+insert into Blood_Report values (110, 'B-', FALSE,106, NULL, 102);
+
+insert into Blood_Report values (112, 'A-', TRUE, NULL, 109, 110);
+
+insert into Blood_Report values (113,'O+',TRUE,115,NULL,114);
+
+insert into Blood_Report values (114,'AB+',FALSE,NULL,115,114);
+
+insert into Blood_Report values (115,'B+',TRUE,113,NULL,115);
+
+insert into Blood_Report values (116,'O-',TRUE,103,NULL,104);
+
+insert into Blood_Report values (117,'O-',TRUE,103,NULL,105);
+
+insert into Blood_Report values (118,'B+',TRUE,105,NULL,115);
+
+insert into Blood_Report values (119,'B+',TRUE,105,NULL,105);
+
+insert into Blood_Report values (120,'B+',TRUE,105,NULL,113);
+
+insert into Blood_Report values (121,'B+',TRUE,108,NULL,108);
+
+insert into Blood_Report values (122,'O+',TRUE,110,NULL,101);
+
+insert into Blood_Report values (123,'B-',TRUE,111,NULL,102);
+
+insert into Blood_Report values (124,'B+',TRUE,112,NULL,103);
+
+insert into Blood_Report values (125,'O+',TRUE,115,NULL,109);
+
+insert into Blood_Report values (126,'O+',TRUE,115,NULL,104);
+
+insert into Blood_Report values (127,'A-',TRUE,121,NULL,101);
+
+insert into Blood_Report values (128,'A+',TRUE,122,NULL,115);
+
+insert into Blood_Report values (129,'AB+',TRUE,123,NULL,103);
+
+insert into Blood_Report values (130,'O-',TRUE,124,NULL,105);
+
+insert into Blood_Report values (131,'B-',TRUE,125,NULL,106);
+
+insert into Blood_Report values (132,'O+',TRUE,126,NULL,107);
+
+insert into Blood_Report values (133,'AB+',TRUE,127,NULL,105);
+
+insert into Blood_Report values (134,'A+',TRUE,128,NULL,108);
+
+insert into Blood_Report values (135,'O+',TRUE,129,NULL,105);
+
+insert into Blood_Report values (136,'B+',TRUE,130,NULL,102);
+
+insert into Blood_Report values (137,'B+',FALSE,NULL,101,102);
+
+insert into Blood_Report values (138,'O+',FALSE,NULL,102,106);
+
+insert into Blood_Report values (139,'AB+',FALSE,NULL,104,111);
+
+insert into Blood_Report values (140,'AB+',FALSE,NULL,105,105);
+
+insert into Blood_Report values (141,'B+',FALSE,NULL,107,101);
+
+insert into Blood_Report values (142,'A-',FALSE,NULL,110,103);
+
+12)Supplied_Plasma
+
+insert into supplied_plasma values(101,'AB-',200,'2021-05-03',102,NULL,105);
+
+insert into supplied_plasma values(102,'A+',100,'2021-08-23',NULL,104,102);
+
+insert into supplied_plasma values(103,'O+',300,'2020-12-07',104,NULL,105);
+
+insert into supplied_plasma values(104,'AB+',150,'2020-10-15',NULL,101,101);
+
+insert into supplied_plasma values(105,'AB-',100,'2021-10-12',NULL,107,108);
+
+insert into supplied_plasma values(106,'B+',150,'2020-04-23',101,NULL,101);
+
+insert into supplied_plasma values(107,'AB+',200,'2021-09-10',103,NULL,106);
+
+insert into supplied_plasma values(108,'O-',100,'2021-10-21',105,NULL,105);
+
+insert into supplied_plasma values(109,'O+',100,'2021-10-22',106,NULL,105);
+
+insert into supplied_plasma values(110,'B+',100,'2021-10-12',107,NULL,108);

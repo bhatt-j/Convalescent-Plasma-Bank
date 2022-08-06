@@ -1,0 +1,160 @@
+create schema plasmabank
+set search_path to plasmabank;
+
+create table City(
+City_id int primary key,
+City_name varchar(15) not null
+)
+
+create table Plasma_Bank(
+Pbank_id int primary key,
+Pbank_name varchar(20) not null,
+Pbank_phone_1 int not null,
+Pbank_phone_2 int,
+City_id int,
+manager_id int,
+FOREIGN KEY (City_id) REFERENCES City(City_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (manager_id) REFERENCES Plasma_Bank_Mgr(Mgr_id)
+ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+create table Hospital(
+Hosp_id int primary key,
+Hosp_name varchar(20) not null,
+Hosp_phone_1 bigint not null,
+Hosp_phone_2 bigint,
+Address varchar(30) not null,
+Pbank_id int,
+City_id int,
+FOREIGN KEY (City_id) REFERENCES City(City_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (Pbank_id) REFERENCES Plasma_Bank(Pbank_id)
+ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+create table Hospital_Needed_Bld_Grp_Qty(
+id primary key,
+Hosp_id int ,
+Hosp_needed_bld_grp varchar(20) not null,
+Hosp_needed_plasma_qty int not null,
+Date date not null,
+FOREIGN KEY (Hosp_id) REFERENCES Hospital(Hosp_id)
+ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+create table Recording_Staff(
+Rec_id int primary key,
+Rec_name varchar(20) not null,
+Rec_phone_1 bigint not null,
+Rec_phone_2 bigint,
+Pbank_id int,
+FOREIGN KEY (Pbank_id) REFERENCES Plasma_Bank(Pbank_id)
+ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+create table LabTester(
+LabTester_id int primary key,
+LabTester_name varchar(20) not null,
+LabTester_email varchar(20) not null,
+LabTester_password varchar(20) not null,
+Pbank_id int,
+FOREIGN KEY (Pbank_id) REFERENCES Plasma_Bank(Pbank_id)
+ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+
+
+create table Plasma_Bank_Mgr(
+Mgr_id int primary key,
+Mgr_name varchar(20) not null,
+Email varchar(20) not null,
+Phone bigint not null,
+Password varchar(20) not null
+)
+
+create table Plasma_Donor(
+Pdonor_id int primary key,
+Pdonor_name varchar(20) not null,
+Pdonor_sex varchar(20) not null,
+Pdonor_phone_1 bigint not null ,
+Pdonor_phone_2 bigint ,
+Pdonor_bld_grp varchar(20) not null,
+Pdonor_reg_date date not null,
+Pdonor_dob date not null,
+Pdonor_age int not null,
+City_id int ,
+Rec_id int,
+FOREIGN KEY (City_id) REFERENCES City(City_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (Rec_id) REFERENCES Recording_Staff(Rec_id)
+ON DELETE CASCADE ON UPDATE CASCADE	
+)
+
+create table Recipients(
+Recip_id int primary key,
+Recip_name varchar(20) not null,
+Recip_sex varchar(20) not null,
+Recip_phone_1 bigint not null,
+Recip_phone_2 bigint,
+Recip_bld_grp varchar(20) not null,
+Recip_dob date not null,
+Recip_reg_date date not null,
+Recip_age int not null,
+Recip_needed_plasma_qty int not null,
+Pbank_id int,
+City_id int,
+Rec_id int ,
+FOREIGN KEY (Pbank_id) REFERENCES Plasma_Bank(Pbank_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (City_id) REFERENCES City(City_id)
+ON DELETE CASCADE ON UPDATE CASCADE, 
+FOREIGN KEY (Rec_id) REFERENCES Recording_Staff(Rec_id)
+ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+create table Plasma(
+Plasma_id int primary key,
+Plasma_qty int not null,
+Bld_grp varchar(20) not null,
+Storage_date date not null,
+Pdonor_id int,
+Pbank_id int,
+FOREIGN KEY (Pdonor_id) REFERENCES  Plasma_Donor(Pdonor_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (Pbank_id) REFERENCES Plasma_Bank(Pbank_id)
+ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+drop table Blood_Report
+create table Blood_Report(
+Sampleno int primary key,
+Bld_grp varchar(20) not null,
+Status boolean not null,
+Pdonor_id int,
+Recip_id int,
+LabTester_id int,
+FOREIGN KEY (Pdonor_id) REFERENCES Plasma_Donor(Pdonor_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (Recip_id) REFERENCES Recipients(Recip_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (LabTester_id) REFERENCES LabTester(LabTester_id)
+ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+
+create table supplied_plasma(
+suppiled_plasma_id int primary key,
+supplied_bld_grp varchar(20) not null,
+supplied_plasma_qty int not null,
+supplied_date date not null,
+recip_id int,
+hosp_id int,
+Pbank_id int,
+FOREIGN KEY (recip_id) REFERENCES recipients(recip_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (hosp_id) REFERENCES hospital(hosp_id)
+ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (Pbank_id) REFERENCES plasma_bank(Pbank_id)
+ON DELETE CASCADE ON UPDATE CASCADE
+)
